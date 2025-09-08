@@ -1,0 +1,13 @@
+# Example CI Workflow
+name: CI Pipeline
+on:
+  push:
+    branches: [ main, feature ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Run build
+        run: echo 'Run your build here!'
